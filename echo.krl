@@ -20,3 +20,20 @@ ruleset hello_world {
     }
   }
 }
+
+ruleset see_songs{
+   meta {
+    name "Hello World"
+    author "Regan Ross"
+    logging on
+  }
+
+  rule message {
+    select when echo message input "(.*)" setting(m)
+    send_directive("sing") with
+      something = m;
+    always {
+      log "Echo " + m
+    }
+  }
+}
