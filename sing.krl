@@ -11,8 +11,8 @@ ruleset see_song {
       something = "Hello World!";
   }
 
-  rule message {
-    select when echo message input "(.*)" setting(m) msg_type "song"
+  rule songs {
+    select when echo message msg_type "song" input "(.*)" setting(m) 
       send_directive("sing") with
         something = m;
       always {
