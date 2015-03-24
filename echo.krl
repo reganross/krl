@@ -24,7 +24,7 @@ A first ruleset for the Quickstart
   }
 
   rule message is active {
-  	select when echo message input "(.*)" setting = (message)
+  	select when echo message input "(.*)" setting (message)
   	send_directive("say") with
   		something = message;
   }
