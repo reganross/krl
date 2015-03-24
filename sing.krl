@@ -1,4 +1,4 @@
-ruleset hello_world {
+ruleset see_song {
   meta {
     name "Hello World"
     author "Regan Ross"
@@ -13,7 +13,7 @@ ruleset hello_world {
 
   rule message {
     select when echo message input "(.*)" setting(m)
-    send_directive("say") with
+    send_directive("sing") with
       something = m;
     always {
       log "Echo " + m
