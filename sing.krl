@@ -12,11 +12,12 @@ ruleset see_song {
   }
 
   rule message {
-    select when echo message input "(.*)" setting(m)
-    send_directive("sing") with
-      something = m;
-    always {
-      log "Echo " + m
+    select when echo message input "(.*)" setting(m) msg_type "song"
+      send_directive("sing") with
+        something = m;
+      always {
+        log "Echo " + m
+      }
     }
   }
 }
