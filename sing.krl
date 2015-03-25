@@ -18,7 +18,7 @@ ruleset see_song {
   }
 
   rule find_hymn {
-    select when explicit sung song "(god)" setting(song)
+    select when explicit sung song "(.*god.*)" setting(song)
       always{
         raise explicit event found_hymn;
         log "stuff " + song;
