@@ -18,6 +18,5 @@ ruleset see_song {
       always {
         log "Echo " + m
       }
-    }
   }
 }
