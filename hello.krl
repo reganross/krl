@@ -12,7 +12,7 @@ ruleset hello_world {
   }
 
   rule message {
-    select when echo message input "(.*)" setting(m)
+    select when echo message2 input "(.*)" setting(m)
     send_directive("say") with
       something = m;
     always {
